@@ -17,7 +17,8 @@ const Hero = () => {
       <div data-aos="zoom-out-down"data-aos-easing="linear"
      data-aos-duration="2000" class="md:w-1/2 max-w-md flex flex-col justify-center">
          <h1 class="md:text-4xl text-2xl italic  uppercase font-black">Stream My Album  -  DEDEHCATION!!!</h1>
-         <p id='para' class="text-xl  mt-4"><b> "Utapata mchanganyiko wa sauti tamu, muziki wa kuvutia na picha zenye nguvu. <br/> Jiandae kusafiri katika ulimwengu wa muziki wenye kuburudisha na kusisimua!" </b> </p>
+         <p id='para' class="text-xl  mt-4"><b>
+"In the beats and rhymes of my album, I've woven the tapestry of my soul, each lyric a thread, each melody a chapter, and each track a journey of existence. As the Music plays, listen closely, for in the grooves, you'll find the universe's secrets, hidden in the bars of my rhyme "</b> </p>
          <div class="my-5 h-16">
             <button class="shadow-md font-medium py-2 px-4 text-yellow-100
                cursor-pointer bg-[#191970] hover:bg-yellow-500 rounded text-lg text-center ml-20 w-48">Join us now</button>

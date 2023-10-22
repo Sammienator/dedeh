@@ -31,6 +31,7 @@ const PricingSection = () => {
   return (
 
     <>
+<section className='bg-black text-white'>
 
 <div className='container'>
 <h1 className='text-center  pt-24  text-5xl'> Trending Fashion</h1>
@@ -56,6 +57,9 @@ const PricingSection = () => {
         </div>
       ))}
     </div>
+
+      
+</section>
     </>
     
   );

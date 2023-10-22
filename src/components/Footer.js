@@ -6,11 +6,11 @@ const Footer = () => {
    
  
 <footer data-aos="zoom-out-down" data-aos-easing="linear"
-     data-aos-duration="2500"  class="bg-yellow-600 dark:bg-yellow-600">
+     data-aos-duration="2500"  class="bg-black text-white ">
     <div class="container px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#b">
-            <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-white">Cloud Galaxy.</span>
+            <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-white">DEDEH 254.</span>
             </a>
 
             <p class="max-w-md mx-auto mt-4 text-white ">Mchanganyiko wa sauti tamu, muziki wa kuvutia na picha zenye nguvu. </p>
