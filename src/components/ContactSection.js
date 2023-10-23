@@ -25,11 +25,11 @@ const ContactSection = () => {
         <h1 className="flex items-center mb-4">
 
           <FaEnvelope className="mr-2" />
-          <span>cloudgalaxy2023@gmail.com</span>
+          <span>managementdedeh254@gmail.com</span>
         </h1>
         <p className="flex items-center">
           <FaPhone className="mr-2" />
-          <span>+254 707 034619</span>
+          <span>+254 705 028754</span>
         </p>
       </div>
       </div>
