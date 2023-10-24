@@ -1,7 +1,32 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import emailjs from '@emailjs/browser';
+
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const ContactSection = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          alert('message sent successfully...');
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    };
   return (
 
 <>
@@ -38,7 +63,7 @@ const ContactSection = () => {
       <div data-aos="fade-down" data-aos-easing="linear"
      data-aos-duration="2000"  className="mt-6 md:ml-6 md:w-1/2">
         <h2 className="text-2xl text-center mb-4">Feel free to send us a message.</h2>
-        <form>
+        <form ref={form} onSubmit={sendEmail}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
               Name
@@ -47,17 +72,18 @@ const ContactSection = () => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
+              name="user_name"
               placeholder="Your Name"
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-              Email
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email" name="user_email">
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
+              name="user_email"
               placeholder="Your Email"
             />
           </div>
@@ -68,17 +94,13 @@ const ContactSection = () => {
             <textarea
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
               id="message"
+              name='message'
               placeholder="Your Message"
             ></textarea>
           </div>
-          <div className="flex justify-center">
-            <button
-              className="bg-[#191970] hover:bg-gold-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-            >
-              Send
-            </button>
-          </div>
+          <div className="flex items-center justify-between">
+          <button type='submit' value='Submit' id='input-submit' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send</button>
+        </div>
         </form>
       </div>
     </div>
